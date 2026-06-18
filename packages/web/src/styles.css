@@ -410,9 +410,9 @@
     --ring: theme('colors.neutral.400');
     --radius: 0.5rem;
 
-    --primary-100: 257 75% 85%;
-    --primary: 257 74% 57%;
-    --primary-300: 257 74% 25%;
+    --primary-100: 173 58% 85%;
+    --primary: 173 58% 39%;
+    --primary-300: 173 58% 20%;
     --primary-foreground: 210 20% 98%;
 
     /* Success — Emerald */
@@ -468,7 +468,7 @@
 
     --sidebar-background: theme('colors.neutral.50');
     --sidebar-foreground: theme('colors.neutral.950');
-    --sidebar-primary: 257 74% 57%;
+    --sidebar-primary: 173 58% 39%;
     --sidebar-primary-foreground: theme('colors.neutral.50');
     --sidebar-accent: color-mix(
       in srgb,
@@ -496,10 +496,10 @@
     --accent: theme('colors.neutral.700');
     --accent-foreground: theme('colors.neutral.50');
 
-    --primary-100: 210 80% 40%;
-    --primary: 210 90% 50%;
-    --primary-300: 210 100% 85%;
-    --primary-foreground: 210 90% 98%;
+    --primary-100: 173 60% 40%;
+    --primary: 173 70% 50%;
+    --primary-300: 173 80% 85%;
+    --primary-foreground: 173 90% 98%;
 
     --success: var(--success-400);
     --destructive: var(--destructive-400);
@@ -522,7 +522,7 @@
 
     --sidebar-background: theme('colors.neutral.800');
     --sidebar-foreground: theme('colors.neutral.50');
-    --sidebar-primary: 210 85% 65%;
+    --sidebar-primary: 173 70% 50%;
     --sidebar-primary-foreground: 210 90% 98%;
     --sidebar-accent: theme('colors.neutral.700');
     --sidebar-accent-foreground: theme('colors.neutral.50');
@@ -784,7 +784,7 @@
 /* Animated AI gradient border */
 .auth-anim-gradient-border {
   position: relative;
-  background: linear-gradient(90deg, #8b5cf6, #a855f7, #c084fc, #a855f7, #8b5cf6);
+  background: linear-gradient(90deg, #0d9488, #14b8a6, #06b6d4, #14b8a6, #0d9488);
   background-size: 300% 100%;
   animation: auth-anim-gradient-flow 4s ease-in-out infinite;
   transition: transform 400ms cubic-bezier(0.34, 1.56, 0.64, 1);

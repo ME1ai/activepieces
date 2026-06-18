@@ -133,7 +133,7 @@ RUN --mount=type=cache,target=/root/.bun/install/cache \
 # Copy frontend files
 COPY --from=build /usr/src/app/dist/packages/web ./dist/packages/web/
 
-LABEL service=activepieces
+LABEL service=metaengage-automation
 
 ENTRYPOINT ["./docker-entrypoint.sh"]
 EXPOSE 80
