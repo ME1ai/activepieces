@@ -1,0 +1,12 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', '${_IMAGE_TAG}', '.']
+    env:
+      - 'DOCKER_BUILDKIT=1'
+images:
+  - '${_IMAGE_TAG}'
+substitutions:
+  _IMAGE_TAG: 'us-central1-docker.pkg.dev/metaengagedemoapp/metaengage-ai/activepieces-branded:latest'
+timeout: 1800s
+options:
+  logging: CLOUD_LOGGING_ONLY
