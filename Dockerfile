@@ -64,9 +64,9 @@ WORKDIR /usr/src/app
 COPY .npmrc package.json bun.lock bunfig.toml ./
 COPY packages/ ./packages/
 
-# Install all dependencies with frozen lockfile
+# Install all dependencies (lockfile regenerated for new workspace packages)
 RUN --mount=type=cache,target=/root/.bun/install/cache \
-    bun install --frozen-lockfile
+    bun install
 
 # Copy remaining source code (turbo config, etc.)
 COPY . .
