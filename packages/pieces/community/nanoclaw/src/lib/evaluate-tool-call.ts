@@ -56,7 +56,7 @@ export const evaluateToolCall = createAction({
   async run(context) {
     const { baseUrl, toolName, toolParameters, agentGroupId, policy } =
       context.propsValue;
-    const auth = context.auth as string;
+    const auth = context.auth as unknown as string;
 
     const response = await httpClient.sendRequest({
       method: HttpMethod.POST,

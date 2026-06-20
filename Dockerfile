@@ -71,8 +71,8 @@ RUN --mount=type=cache,target=/root/.bun/install/cache \
 # Copy remaining source code (turbo config, etc.)
 COPY . .
 
-# Build frontend, engine, server API, and worker
-RUN npx turbo run build --filter=web --filter=@activepieces/engine --filter=api --filter=worker
+# Build frontend, engine, server API, worker, and custom pieces
+RUN npx turbo run build --filter=web --filter=@activepieces/engine --filter=api --filter=worker --filter=@activepieces/piece-nanoclaw
 
 # The web build emits hidden source maps (vite build.sourcemap='hidden') used to
 # symbolicate production stack traces in Sentry/BetterStack error tracking. Upload
