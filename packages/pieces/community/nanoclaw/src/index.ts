@@ -1,11 +1,12 @@
 import { createPiece, PieceAuth } from '@activepieces/pieces-framework';
+import { dispatchSwarmTask } from './lib/dispatch-swarm-task';
 import { evaluateToolCall } from './lib/evaluate-tool-call';
 import { queryAgent } from './lib/query-agent';
 
 export const nanoclaw = createPiece({
   displayName: 'NanoClaw',
   description:
-    'AI safety evaluation and agent orchestration powered by Gemini, part of the MetaEngage Cognitive Automation Mesh.',
+    'AI swarm task engine — orchestrates Claws (skill agents) for safety evaluation, reasoning, content generation, and collaborative task execution via Gemini.',
   auth: PieceAuth.SecretText({
     displayName: 'NanoClaw API Key',
     description:
@@ -15,6 +16,6 @@ export const nanoclaw = createPiece({
   minimumSupportedRelease: '0.36.1',
   logoUrl: '/logo.svg',
   authors: ['metaengage'],
-  actions: [evaluateToolCall, queryAgent],
+  actions: [dispatchSwarmTask, evaluateToolCall, queryAgent],
   triggers: [],
 });
